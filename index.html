@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purrfect Cats</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#fff8f0;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#ff914d,#ffb347);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:white;
+    color:#ff7a00;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+section{
+    width:90%;
+    max-width:1100px;
+    margin:60px auto;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card p{
+    padding:0 15px 20px;
+    color:#555;
+}
+
+.fun{
+    background:#ffe7d1;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🐱 Purrfect Cats</h1>
+    <p>Everything you need to know about our adorable feline friends.</p>
+
+    <a href="#breeds" class="btn">Explore Cats</a>
+</header>
+
+<section id="breeds">
+<h2>Popular Cat Breeds</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=800&q=80">
+<h3>Persian</h3>
+<p>Gentle, fluffy, and calm. Persian cats love relaxing and being pampered.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80">
+<h3>Maine Coon</h3>
+<p>One of the largest cat breeds. Friendly, intelligent, and playful.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=800&q=80">
+<h3>Siamese</h3>
+<p>Known for striking blue eyes, vocal personality, and affectionate nature.</p>
+</div>
+
+</div>
+</section>
+
+<section class="fun">
+
+<h2>🐾 Fun Cat Facts</h2>
+
+<p id="fact">
+Click the button below to discover a random cat fact!
+</p>
+
+<br><br>
+
+<button onclick="newFact()" style="padding:15px 30px;border:none;background:#ff914d;color:white;border-radius:10px;font-size:16px;cursor:pointer;">
+Show Fact
+</button>
+
+</section>
+
+<footer>
+Made with ❤️ for Cat Lovers
+</footer>
+
+<script>
+
+const facts=[
+"Cats sleep around 13–16 hours every day.",
+"Every cat's nose print is unique.",
+"Cats can rotate their ears 180 degrees.",
+"A group of kittens is called a kindle.",
+"Cats can jump about six times their body length.",
+"Most cats have 18 toes."
+];
+
+function newFact(){
+const random=Math.floor(Math.random()*facts.length);
+document.getElementById("fact").innerHTML=facts[random];
+}
+
+</script>
+
+</body>
+</html>
